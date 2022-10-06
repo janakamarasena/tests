@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    if: ${{ contains(github.event.comment, 'weekly')  }} 
+    if: contains(${{github.event.comment}} , 'weekly')  
     runs-on: ubuntu-latest
     steps:
       - name: Run a multi-line script
